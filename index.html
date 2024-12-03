@@ -16,10 +16,13 @@
             </div>
 
             <div class="buttons">
-                <h3>About</h3>
-                <h3>Project</h3>
-                <h3>Resume</h3>
+            <div class="pages">
+                <h2>About</h2>
+                <h2>Project</h2>
+                <h2>Resume</h2>
+            </div>
 
+            <div class="contact">
                 <svg  class="linkdin" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                     <g clip-path="url(#clip0_172_426)">
                       <path d="M34.125 0H7.875C3.52734 0 0 3.52734 0 7.875V34.125C0 38.4727 3.52734 42 7.875 42H34.125C38.4727 42 42 38.4727 42 34.125V7.875C42 3.52734 38.4727 0 34.125 0ZM12.9862 35.652H6.46154L6.42368 16.116H12.9483L12.9862 35.652ZM9.5598 13.5604H9.52193C7.38912 13.5604 6.01352 12.0901 6.01352 10.2602C6.01352 8.38612 7.43329 6.96635 9.60397 6.96635C11.7746 6.96635 13.1061 8.38612 13.1502 10.2602C13.1502 12.0901 11.7683 13.5604 9.5598 13.5604ZM35.6079 35.652H29.0264V25.0385C29.0264 22.4703 28.345 20.7224 26.0481 20.7224C24.2939 20.7224 23.3474 21.9023 22.893 23.0445C22.7227 23.4546 22.6785 24.0162 22.6785 24.5904V35.652H16.0655L16.0276 16.116H22.6406L22.6785 18.8735C23.524 17.5673 24.9312 15.7184 28.3008 15.7184C32.4781 15.7184 35.6016 18.4444 35.6016 24.3065V35.652H35.6079Z" fill="#321F10"/>
@@ -42,45 +45,76 @@
                     </defs>
                 </svg>
             </div>
+        </div>
     </div>
 
 
     <div class="landing"> 
-        <h1>DariaX</h1>
+        <div class="landingName">
+        <div class="bigname">DariaX</div>
+    </div>
         <div class="sub-title">
-            <h3>User-centered Design</h3>
-            <h3>&</h3>
-            <h3>Software Engineer</h3>
+            <div>User-centered Design</div>
+            <div>&</div>
+            <div>Software Engineer</div>
         </div>
     </div>
 
+    <div class="layerContainer">
     <div class="roleCards">
-        <div class="card1">
-            <p>Product Manager</p>
+        <div class="rolecard rc1">
+            <img class="roleimg PMimg" src = 'imgs/PMimg.png'>
+            <div class="roleText PMText">
+            <p class="roleTitle rt1">Product Manager</p>
+
+            <div class="roleInfo">
+            <p class="PMInfo">4+ years in tech industry.</p>
+            <p class="PMInfo">Cross-functional Player & Problem Solver with proven data. </p>
         </div>
-        <div class="card2">
-            <p>Software Engineer</p>
         </div>
-        <div class="card3">
-            <p>UX Researcher & Designer</p>
         </div>
+        <div class="rolecard rc2">
+            <img class="roleimg SEimg" src = 'imgs/SEimg.png'>
+            <div class="roleText SEText">
+            <p class="roleTitle rt2">Software Engineer</p>
+            <div class="roleInfo">
+            <p class="SEInfo">Self-taught programmer, accumulating enthusiasm.</p>
+        </div>
+            </div>
+        </div>
+        <div class="rolecard rc3">
+            <img class="roleimg UXimg" src = 'imgs/UXimg.png'>
+            <div class="roleText UXText">
+            <div class="roleTitle">
+            <p class="rt3">UX Researcher</p>
+            <p class="rt3">& Designer</p>
+        </div>
+           <div class="roleInfo">
+            <p class="UXInfo">Master in  HCI & UX Research. </p>
+            <p class="UXInfo">Apply user-centric theories and methods to real-world problems.</p>
+        </div>
+        </div>
+        </div>
+        
     </div>
+
+    <div class="slogan">
+        <h3 class="sloganwords">True Design Promote Mutual Understanding. True Design Promote Mutual Understanding. True Design Promote </h3>
+    </div>
+
+</div>
 
     <div class="introInfo">
-        <div class="slogan">
-            <h3>True Design Promote Mutual Understanding.</h3>
-        </div>
         <div class="self-intro">
-            <h4>Hi, I'm Daria Xiang.
-                4+ years in tech, now pivoting to UX Engineer.</h4>
-            <h4>Integrating user-centered design with technology, to create seamless user experience.</h4>
+            <p class="introCopy">Hi, I'm Daria Xiang.</p>
+            <p class="introCopy">With 4+ years in tech, I merge user-centered design and technology to deliver seamless, unforgettable experiences. </p>
         </div>
         <button class="reuseme">RÉSUMÉ</button>
     </div>
 
     <div class="skills">
-        <div class="skill1">
-            <h3>Software Engineering</h3>
+        <div class="skill skill1" >
+            <p class="skillName">Software Engineering</p>
         <ul class="skillList">
             <li>HTML5</li>
             <li>CSS</li>
@@ -90,8 +124,7 @@
         </ul>
         </div>
        
-        <div class="skill2">
-            <h3>UX Research & Design</h3>
+        <div class="skill skill2"> 
         <ul class="skillList">
             <li>Competitive Analysis</li>
             <li>Persona Building </li>
@@ -100,10 +133,11 @@
             <li>Accessibility & Usability</li>
             <li>Figma, Photoshop, Illustrator</li>
         </ul>
+        <p class="skillName">UX Research & Design</p>
         </div>
        
-        <div class="skill3">
-            <h3>Product Management</h3>
+        <div class="skill skill3">
+            <p class="skillName">Product Management</p>
         <ul class="skillList">
             <li>Growth Strategy</li>
             <li>Data Analysis  </li> 
@@ -115,72 +149,81 @@
 
     </div>
     
+    <p class="projectsTitle">PROJECTS:</p>
+
     <div class = "projects">
-        <h1>PROJECTS:</h1>
-        <div class="project-1">
-            <div class="projectInfo">
-                <h1>GlittHer</h1>
-                <p>A Yelp-like business search platform for Chinese Females.</p>
+        <div class="project p1">
+            <div class="projectInfo info1">
+                <div class="projectCopy">
+                <p class="projectTitle title1">GlittHer</p>
+                <p class="projectIntro">A Yelp-like business search platform for Chinese Females.</p>
+            </div>
             <div class="projectTags">
-                <p>Research</p>
-                <p>UX Design</p>
-                <p>UX & Visual Design</p>
-                <p>Link</p>
+                <p class="tag t1">Research</p>
+                <p class="tag t1">UX Design</p>
+                <p class="tag t1">UX & Visual Design</p>
+                <p class="tag t1">Link</p>
             </div>
             </div>
-            <div class="projectImg">
-                <img src="">
+            <div class="projectImg Img1">
+                <img class='pImg glitImg' src="imgs/glittHer.png">
             </div>
         </div>
 
-        <div class="project-2">
-            <div class="projectInfo">
-                <h1>Calculator</h1>
-                <p>A well-designed on-screen calculator with keyboard support, capable of handling unexpected typing situations.</p>
+        <div class="project p2">
+            <div class="projectImg Img2">
+                <img class="pImg calImg" src="imgs/calculator.png">
+            </div>
+            <div class="projectInfo info2">
+                <div class="projectCopy">
+                <p class="projectTitle title2">Calculator</p>
+                <p class="projectIntro">A well-designed on-screen calculator with keyboard support, capable of handling unexpected typing situations.</p>
+            </div>
             <div class="projectTags">
-                <p>Visual</p>
-                <p>UI Design</p>
-                <p>Programming</p>
-                <p>Link</p>
+                <p class="tag t2">Visual</p>
+                <p class="tag t2">UI Design</p>
+                <p class="tag t2">Programming</p>
+                <p class="tag t2">Link</p>
             </div>
             </div>
-            <div class="projectImg">
-                <img src="">
-            </div>
+            
         </div>
 
-        <div class="project-2">
-            <div class="projectInfo">
-                <h1>Etch-A-Sketch</h1>
-                <p>An interactive sketchpad with various color modes.</p>
+        <div class="project p3">
+            <div class="projectInfo info3">
+                <div class="projectCopy"> 
+                <p class="projectTitle title3">Etch-A-Sketch</p>
+                <p class="projectIntro">An interactive sketchpad with various color modes.</p>
+            </div>
             <div class="projectTags">
-                <p>Visual</p>
-                <p>UI Design</p>
-                <p>Programming</p>
-                <p>Link</p>
+                <p class="tag t3">Visual</p>
+                <p class="tag t3">UI Design</p>
+                <p class="tag t3">Programming</p>
+                <p class="tag t3">Link</p>
             </div>
             </div>
-            <div class="projectImg">
-                <img src="">
+            <div class="projectImg Img3">
+                <img class="pImg sktImg" src="imgs/sketch.png">
             </div>
         </div>
     </div>
 
     <div class="resume">
-        <h1>Resume</h1>
-        <button>More Details</button>
+        <img class="CV" src="imgs/resume.png">
     </div>
 
-    <div class="contact">
-        <h1>LETS CONNECT!</h1>
-        <button>Email Me</button>
-        <button>Linkedin</button>
+    <div class="contact2">
+        <p class="letsconnect">LETS CONNECT!</p>
+        <div class='contactButtons'>
+        <button class="contactButton emailme">Email Me</button>
+        <button class="contactButton bigLinkedin">Linkedin</button>
+        </div>
     </div>
 
     <footer>
-        <h5>DaRiaX</h5>
-        <h5>@</h5>
-        <h5>2024</h5>
+        <p>DaRiaX</p>
+        <p class="at">@</p>
+        <p>2024</p>
     </footer>
 </body>
-</html>
+</html> 
