@@ -26,7 +26,7 @@ body, div, p{
     font-weight: 900;
     line-height: normal;
     letter-spacing: 0.48px;
-    margin-left: 42px;
+    margin-left: 4vw;
 }
 
 .buttons{
@@ -69,15 +69,15 @@ body, div, p{
     color: #BBE9FF;
     text-shadow: -31px 16px 4.3px #74523A;
 font-family: Poppins;
-font-size: 300px;
+font-size: 30vh;
 font-style: normal;
 font-weight: 900;
-line-height:334px;
+line-height:30vh;
 letter-spacing: 16.8px;
 flex-shrink: 1;
 margin-left: 50px;
 max-width: fit-content;
-padding-top: 80px;
+padding-top: 11vh;
 
 }
 
@@ -86,7 +86,7 @@ padding-top: 80px;
     color: #242424;
 text-align: center;
 font-family: Poppins;
-font-size: 40px;
+font-size: 4vh;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
@@ -95,13 +95,14 @@ display: flex;
 gap: 20px;
 align-items: center;
     justify-content: center;
-    margin:0;
+  
 }
 
 .landing{
     display: flex;
     flex-direction: column;
     align-content: center;
+    min-height: 60vh;
 }
 
 
@@ -112,14 +113,15 @@ align-items: center;
 
 .slogan{
     margin:0;
-    overflow: hidden;
+    padding: 0;
+    display: flex;
 }
 
 .sloganwords{
     color: #FFF;
-text-align: center;
+text-align: left;
 font-family: Poppins;
-font-size: 2.4vh;
+font-size: 2.3vh;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -128,6 +130,7 @@ max-height: 3.6vh;
 margin:0;
 background: #A8DDEF;
 overflow: hidden;
+padding-left: 1rem;
 
 }
 
@@ -566,40 +569,38 @@ padding-bottom: 1vh;
 
 
 .rolecard{
-    width: 23.5vh;
-height: 38vh;
-border-radius: 38px;
+    width: 28.5vh;
+min-height: 43vh;
+height: fit-content;
+border-radius: 2.6vh;
 background: #321F10;
 
 display: flex;
 flex-direction: column;
-column-gap: 2vh;
+
 }
 
 
 .roleimg{
-    height: 12vh;
-    width: 14vh;
     align-self: center;
-    margin:3vh 0;
 }
 
 .PMimg{
-    width: 15vh;
-height: 15vh;
+    width: 16vh;
+height: 16vh;
 margin: 3vh 0 0 0;
 }
 
 .SEimg{
-    width: 11vh;
-height: 10vh;
-margin:5vh 0 3vh 0;
+    width: 12vh;
+height: 11vh;
+margin:5vh 0 4vh 0;
 }
 
 .UXimg{
-    width: 15vh;
-height: 13vh;
-margin: 3.5vh 0 1.5vh 0;
+    width: 16vh;
+height: 14vh;
+margin: 2.8vh 0 1vh 0;
 }
 
 .rc1{
@@ -624,51 +625,62 @@ box-shadow: -26px 19px 12.8px 0px rgba(0, 0, 0, 0.35);
 .roleTitle {
     color: #FFF;
 font-family: Poppins;
-font-size: 2vh;
+font-size: 2.5vh;
 font-style: normal;
 font-weight: 600;
 line-height: 2.4vh;
 justify-self: center;
 letter-spacing: 0.01vh;
 
-width:18vh;
-
-border-bottom: 3px solid #FFF;
-
-padding-bottom: 1.3vh;
-
-
 }
 
-.rt1, .rt2{
+.rt1{
     margin-top: 1vh;
-    padding-bottom: 2.7vh;
+    padding-bottom: 3vh;
+    min-width:20vh;
+    border-bottom: 3px solid #FFF;
+    
     
 }
 
 .rt2{
-    font-size: 1.9vh;
-    /* letter-spacing: 0.01vh; */
+    margin-top: 0vh;
+    padding-bottom: 3vh;
+    font-size: 2.4vh;
+    min-width:20vh;
+    border-bottom: 3px solid #FFF;
 
 }
 
+.roleTitle3{
+    min-width: 20vh;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid #FFF;
+}
+
+.rt3 {
+    font-size: 2.5vh;
+    letter-spacing: 0.1vh;
+    line-height: 2.9vh;
+    min-width: 22vh;
+}
 
 
 .roleInfo{
     color: #FFF;
 font-family: Poppins;
-font-size: 1.2vh;
+font-size: 1.6vh;
 font-style: normal;
 font-weight: 400;
-line-height: 2vh;
-letter-spacing: 0.02vh;
+line-height: 3vh;
+/* letter-spacing: vh; */
 
 display: flex;
 flex-direction: column;
 
 justify-content: center;
 margin-top: 2vh;
-padding:0 2.6vh;
+padding:0 2.8vh;
 
 }
 
