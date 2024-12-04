@@ -112,21 +112,22 @@ align-items: center;
 
 .slogan{
     margin:0;
+    overflow: hidden;
 }
 
 .sloganwords{
     color: #FFF;
 text-align: center;
 font-family: Poppins;
-font-size: 28px;
+font-size: 2.4vh;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-letter-spacing: 0.76px;
-max-height: 50px;
+letter-spacing: 0.05vh;
+max-height: 3.6vh;
 margin:0;
-margin-top: 5px;
 background: #A8DDEF;
+overflow: hidden;
 
 }
 
@@ -446,7 +447,7 @@ background: #EAF0F2;;
     box-shadow: -22px 22px 7px 0px #D9C6CD;
 }
 
-. sktImg{
+.sktImg{
     border: 1px solid #FFE2EB;
     box-shadow: -6px 4px 7px 0px rgba(0, 0, 0, 0.25) inset;
 }
@@ -565,7 +566,7 @@ padding-bottom: 1vh;
 
 
 .rolecard{
-    width: 23vh;
+    width: 23.5vh;
 height: 38vh;
 border-radius: 38px;
 background: #321F10;
@@ -583,19 +584,37 @@ column-gap: 2vh;
     margin:3vh 0;
 }
 
+.PMimg{
+    width: 15vh;
+height: 15vh;
+margin: 3vh 0 0 0;
+}
+
+.SEimg{
+    width: 11vh;
+height: 10vh;
+margin:5vh 0 3vh 0;
+}
+
+.UXimg{
+    width: 15vh;
+height: 13vh;
+margin: 3.5vh 0 1.5vh 0;
+}
+
 .rc1{
-    border: 8px solid #DDE5B2;
+    border: 0.8vh solid #DDE5B2;
     box-shadow: -13px 31px 11.4px rgba(0, 0, 0, 0.35);
 }
 
 .rc2{
-    border: 10px solid #BFEDFD;
+    border: 0.8vh solid #BFEDFD;
     background: #321F10;
     box-shadow: -26px 10px 7.2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .rc3{
-    border: 10px solid #FEE0DC;
+    border: 0.8vh solid #FEE0DC;
 background: #321F10;
 box-shadow: -26px 19px 12.8px 0px rgba(0, 0, 0, 0.35);
 }
@@ -605,11 +624,12 @@ box-shadow: -26px 19px 12.8px 0px rgba(0, 0, 0, 0.35);
 .roleTitle {
     color: #FFF;
 font-family: Poppins;
-font-size: 1.8vh;
+font-size: 2vh;
 font-style: normal;
 font-weight: 600;
 line-height: 2.4vh;
 justify-self: center;
+letter-spacing: 0.01vh;
 
 width:18vh;
 
@@ -625,6 +645,14 @@ padding-bottom: 1.3vh;
     padding-bottom: 2.7vh;
     
 }
+
+.rt2{
+    font-size: 1.9vh;
+    /* letter-spacing: 0.01vh; */
+
+}
+
+
 
 .roleInfo{
     color: #FFF;
