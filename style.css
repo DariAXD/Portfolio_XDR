@@ -138,7 +138,7 @@ padding-left: 1rem;
     display: flex;
     flex-direction: column;
 margin:0;
-height: 80vh;
+height: fit-content;
 flex-shrink: 0;
 background:#332B2B;
 align-items: center;
@@ -146,104 +146,119 @@ justify-items: center;
 align-content: center;
 justify-content: center;
 
-padding-bottom: 5rem;
+padding-bottom: 12vh;
 
+row-gap: 8vh;
 }
 
 .introCopy{
     color: #FFF9EB;
 font-family: Poppins;
-font-size: 45px;
+font-size: 4.5vh;
 font-style: normal;
 font-weight: 700;
-line-height: 92px; /* 167.273% */
-letter-spacing: 1.1px;
-width: 68vw;
+line-height: 7.5vh; /* 167.273% */
+letter-spacing: 1px;
+width: 60vw;
+text-align: justify;
 
 }
 
 .self-intro{
-    margin-top: 15rem;
+    margin-top: 35vh;
+    align-self: center;
+    justify-self: center;
 }
 
-.reuseme{
-    border-radius: 65px;
+
+.resume1{
+    border-radius: 4rem;
 border: 3px solid #321F10;
 background: #FFF9EB;
-width: 240px;
-height: 83px;
-flex-shrink: 0;
+width: fit-content;
+height: fit-content;
+padding:1.5vh 4.5vh;
+
 
 color: #321F10;
 text-align: center;
 -webkit-text-stroke-width: 1;
 -webkit-text-stroke-color: #321F10;
 font-family: Poppins;
-font-size: 36px;
+font-size: 3vh;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
-letter-spacing: 4.5px;
-margin-top: 50px;
+letter-spacing: 0.4vh;
+margin: 4vh 0 3vh 0;
 text-align: center;
+
+
 }
 
 .skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: stretch;
-    justify-items: stretch;
-    border-bottom: 20px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    box-shadow: -6px 31px 13.3px 0px rgba(116, 82, 58, 0.35);
+    margin-top: 11vh;
 }
 
 .skill{
-width:100vw/3;
-height: 70vh;
-flex-shrink: 0;
-
+    height: 66vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: flex-start;
-
-margin-top: 10vh;
-padding:40px;
+padding:8vh 5vw;
+overflow: hidden;
 
 }
 
 .skill1{
+    width:32vw;
     background: #DDEDF2;
+    background-image: url("imgs/blueSkill.png");
+    background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .skill2{
+    width:36vw;
     background: #FFE2EA;
+    background-image: url("imgs/pinkSkill.png");
+    background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .skill3{
+    width:33vw;
     background: #F0F6D6;
+    background-image: url("imgs/greenSkill.png");
+    background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .skillName{
     color: #FFF9EB;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 0.25vh;
     -webkit-text-stroke-color: #321F10;
 font-family: Poppins;
-font-size: 46px;
+font-size: 5.5vh;
 font-style: normal;
 font-weight: 900;
-line-height: 73px; /* 132.727% */
-letter-spacing: 3.3px;
-padding-left: 20px;
+line-height: 7.5vh; /* 132.727% */
+letter-spacing: 0.15vh;
+padding-left: 2vh;
 }
 
 .skillList{
     color: #321F10;
 font-family: Poppins;
-font-size: 28px;
+font-size: 3vh;
 font-style: normal;
 font-weight: 600;
-line-height: 67px; /* 191.429% */
-letter-spacing: 2.1px;
+line-height: 6vh; /* 191.429% */
+letter-spacing: 0.15vh;
+padding-left: 4.8vh;
 
 }
 
@@ -256,6 +271,7 @@ letter-spacing: 2.1px;
     align-items: center;
     row-gap: 13vh;
 }
+
 .projectsTitle{
     color: #321F10;
 text-shadow: -12px 7px 4px rgba(116, 82, 58, 0.31);
@@ -570,7 +586,7 @@ padding-bottom: 1vh;
 
 .rolecard{
     width: 28.5vh;
-min-height: 43vh;
+min-height: 44vh;
 height: fit-content;
 border-radius: 2.6vh;
 background: #321F10;
