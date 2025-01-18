@@ -15,24 +15,29 @@ a{
 body, div, p{
     margin: 0;
     padding: 0;
+    font-family: Poppins, sans-serif;
 
 }
-
+ /* Header */
+ /* Base Style */
 .header{
     display: grid;
     grid-template-columns: 6fr 2fr;
     border-bottom:4px solid #321F10;
-    column-gap: 10px;
+    align-items: center;
+    font-size:1.5vw;
+    padding: 1rem 0;
+    
 }
 
 .logo{
     color: #321F10;
-    font-family: Poppins;
+    font-family: Poppins,sans-serif;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 800;
     line-height: normal;
-    letter-spacing: 0.48px;
-    margin-left: 4vw;
+    letter-spacing: 0.05vw;
+    margin-left: 3vw;
 }
 
 .buttons{
@@ -45,684 +50,304 @@ body, div, p{
 
 .pages{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,auto);
     color: #321F10;
-    font-family: Poppins;
+    font-family: Poppins,sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+   
     column-gap: 3vw;
+    justify-content: flex-end;
     
 }
 
 .contact{
     display: grid;
-    grid-template-columns: 55px 55px;
+    grid-template-columns: repeat(2,55px);
     column-gap: 2px;
 }
 
-.landingName{
+/* Header Responsive */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+        margin-right: 0;
+        row-gap: 1rem;
+        justify-items: center;
+    }
+
+    .pages {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+    .contact {
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        column-gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 5vw;
+        padding: 0.5rem;
+    }
+
+    .pages {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    .contact {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+    }
+}
+
+
+/* Landing Part */
+/* Base Styles */
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 0 2rem;
+}
+
+/* Name Section */
+.landing-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: fit-content;
-    margin:0;
-   
-
+    margin-bottom: 3vh;
 }
 
-.bigname{
+.big-name {
     color: #BBE9FF;
-    text-shadow: -31px 16px 4.3px #74523A;
-font-family: Poppins;
-font-size: 30vh;
-font-style: normal;
-font-weight: 900;
-line-height:30vh;
-letter-spacing: 16.8px;
-flex-shrink: 1;
-margin-left: 50px;
-max-width: fit-content;
-padding-top: 11vh;
-
+    /* text-shadow: -31px 16px 4.3px #74523A; */
+    text-shadow: -2rem 1rem 0.3rem #74523A;
+    font-family: Poppins, sans-serif;
+    font-size: 15vw;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1vw;
+    text-align: center;
+    margin: 0;
+    padding-top: 5vh;
 }
 
-
-.sub-title{
+/* Subtitle Section */
+.sub-title {
     color: #242424;
-text-align: center;
-font-family: Poppins;
-font-size: 4vh;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-letter-spacing: 0.8px;
-display: flex;
-gap: 20px;
-align-items: center;
-    justify-content: center;
-}
-
-.landing{
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    min-height: 60vh;
-    margin-top: -2vh;
-    
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .big-name {
+        font-size: 15vw;
+        letter-spacing: 0.8vw;
+        text-shadow: -25px 13px 3.5px #74523A;
+    }
 
-.roleCards{
-    min-height:300px;
-    align-content: center;
+    .sub-title {
+        font-size: 4vw;
+        gap: 1.5vw;
+    }
 }
 
-.slogan{
-    margin:0;
+@media (max-width: 768px) {
+    .big-name {
+        font-size: 15vw;
+        letter-spacing: 0.5vw;
+        text-shadow: -20px 10px 3px #74523A;
+    }
+
+    .sub-title {
+        font-size: 5vw;
+        gap: 1vw;
+        flex-direction: column; /* Stack the subtitles vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .big-name {
+        font-size: 15vw;
+        letter-spacing: 0.3vw;
+        text-shadow: -10px 7px 2px #74523A;
+    }
+
+    .sub-title {
+        font-size: 5vw;
+        gap: 0.5vw;
+    }
+}
+
+/* Role cards & slogan */
+ /* base style */ 
+
+/* Base styles */
+.roleCards {
+    min-height: 300px;
+    align-content: center;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    margin: 0;
     padding: 0;
     display: flex;
 }
 
-.sloganwords{
+.sloganwords {
     color: #FFF;
-text-align: left;
-font-family: Poppins;
-font-size: 2.3vh;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.05vh;
-max-height: 3.6vh;
-margin:0;
-background: #A8DDEF;
-overflow: hidden;
-padding-left: 1rem;
-
-}
-
-.introInfo{
-    display: flex;
-    flex-direction: column;
-margin:0;
-height: fit-content;
-flex-shrink: 0;
-background:#332B2B;
-align-items: center;
-justify-items: center;
-align-content: center;
-justify-content: center;
-
-padding-bottom: 12vh;
-
-row-gap: 8vh;
-}
-
-.introCopy{
-    color: #FFF9EB;
-font-family: Poppins;
-font-size: 4.5vh;
-font-style: normal;
-font-weight: 700;
-line-height: 7.5vh; /* 167.273% */
-letter-spacing: 1px;
-width: 60vw;
-text-align: justify;
-
-}
-
-.self-intro{
-    margin-top: 35vh;
-    align-self: center;
-    justify-self: center;
-}
-
-
-.resume1{
-    border-radius: 4rem;
-border: 3px solid #321F10;
-background: #FFF9EB;
-width: fit-content;
-height: fit-content;
-padding:1.5vh 4.5vh;
-
-
-color: #321F10;
-text-align: center;
--webkit-text-stroke-width: 1;
--webkit-text-stroke-color: #321F10;
-font-family: Poppins;
-font-size: 3vh;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-letter-spacing: 0.4vh;
-margin: 4vh 0 3vh 0;
-text-align: center;
-
-
-}
-
-.skills{
-    display: flex;
-    box-shadow: -6px 31px 13.3px 0px rgba(116, 82, 58, 0.35);
-    margin-top: 11vh;
-}
-
-.skill{
-    height: 66vh;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-padding:8vh 5vw;
-overflow: hidden;
-
-}
-
-.skill1{
-    width:32vw;
-    background: #DDEDF2;
-    background-image: url("imgs/blueSkill.png");
-    background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.skill2{
-    width:36vw;
-    background: #FFE2EA;
-    background-image: url("imgs/pinkSkill.png");
-    background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.skill3{
-    width:33vw;
-    background: #F0F6D6;
-    background-image: url("imgs/greenSkill.png");
-    background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.skillName{
-    color: #FFF9EB;
-    -webkit-text-stroke-width: 0.25vh;
-    -webkit-text-stroke-color: #321F10;
-font-family: Poppins;
-font-size: 5.5vh;
-font-style: normal;
-font-weight: 900;
-line-height: 7.5vh; /* 132.727% */
-letter-spacing: 0.15vh;
-padding-left: 2vh;
-}
-
-.skillList{
-    color: #321F10;
-font-family: Poppins;
-font-size: 3vh;
-font-style: normal;
-font-weight: 600;
-line-height: 6vh; /* 191.429% */
-letter-spacing: 0.15vh;
-padding-left: 4.8vh;
-
-}
-
-.projects{
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    row-gap: 13vh;
-}
-
-.projectsTitle{
-    color: #321F10;
-text-shadow: -12px 7px 4px rgba(116, 82, 58, 0.3);
-font-family: Poppins;
-font-size: 11vh;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-letter-spacing: 0.5vh;
-margin-left: 10vh;
-margin-top: 15vh;
-margin-bottom: 8vh;
-}
-
-/* .project-1{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 2vw;
-} */
-
-.projectInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    width: 54vh;
-height: 84vh;
-flex-shrink: 0;
-
-border-radius: 35px;
-/* background: #FFF1C5; */
-
-/* box-shadow: -22px 22px 5px 0px #D4C699; */
-
-
-padding-left:5vh;
-padding-right:5vh;
-box-sizing: border-box;
-}
-
-.projectTitle{
-    color: #321F10;
-font-family: Poppins;
-
-font-style: normal;
-font-weight: 800;
-
-line-height: 5.625vh; /* 112.5% */
-letter-spacing: 0.1vh;
-
-padding-bottom: 1.5vh;
-margin-top: -2.5vh;
-}
-
-.title1{
-    font-size: 7vh;
-} 
-
-.title2 {
-    font-size: 6.5vh;
-}
-
-.title3{
-    font-size: 4.5vh;
-    letter-spacing: 0.2rem;
-    
-}
-
-.projectIntro{
-    color: #53331a;
-font-family: Poppins;
-font-size: 2.5vh;
-font-style: normal;
-font-weight: 400;
-line-height: 3.5vh; /* 158.333% */
-}
-
-.projectImg{
-    width: 89vh;
-height: 84vh;
-flex-shrink: 0;
-
-border-radius: 35px;
-border-radius: 35px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-box-sizing: border-box;
-
-}
-
-.pImg{
-    width: 80vh;
-height: 75vh;
-flex-shrink: 0;
-border-radius: 35px;
-
-box-shadow: -3px 3px 8.7px 0px rgba(0, 0, 0, 0.3) inset;
-
-}
-
-.project{
-    display: flex;
-    align-items: center;
-    gap: 1.5vw;
-}
-
-.projectTags{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1vh;
-    row-gap: 0.1rem;
-    justify-content:flex-start;
-    margin-bottom: -3vh;
-}
-
-.tag{
-    width: fit-content;
-height: 3.5vh;
-flex-shrink: 0;
-border-radius: 45px;
-
-color: #321F10;
-font-family: Poppins;
-font-size: 2.3vh;
-font-style: normal;
-font-weight: 600;
-line-height: 3.5vh; /* 146.154% */
-
-padding: 1.5vh 3vh;
-
-margin-top: 2vh;
-}
-
-.taglink{
-    border: 0;
-    height:
-}
-
-.info1{
-    background: #FFF1C5;
-    box-shadow: -22px 22px 5px 0px #D4C699;
-}
-
-.glitImg{
-    border: 1px solid #FBEAB3;
-    box-shadow: -3px 3px 8.7px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-
-.Img1{
-    border: 3px solid #F7D465;
-box-shadow: -22px 22px 5px 0px #D4C699;
-background: #FFF8E1;
-
-}
-
-
-
-.t1{
-    background: #FAC88E;
-
-}
-
-
-.info2{
-    background: #DDEDF2;
-    box-shadow: -22px 22px 5px 0px #B0BCC0;
-
-}
-
-. calImg{
-
-    border-radius: 35px;
-    border: 1px solid #B8DBE7;
-    box-shadow: -3px 4px 6.5px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.Img2{
-    border: 3px solid #B8DBE7;
-box-shadow: -22px 22px 5px 0px #B0BCC0;
-background: #EAF0F2;;
-
-
-
-}
-
-
-
-.t2{
-    background: rgba(175, 214, 228, 0.80);
-
-}
-
-.info3{
-    background: #FBEFF3;;
-    box-shadow: -22px 22px 7px 0px #D9C6CD;
-}
-
-.sktImg{
-    border: 1px solid #FFE2EB;
-    box-shadow: -6px 4px 7px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.Img3{
-    border-radius: 35px;
-    border: 2px solid #FFE2EB;
-    box-shadow: -22px 22px 7px 0px #D9C6CD;
-    background: rgba(254, 246, 249);
-}
-
-
-
-.t3{
-    background: #EFB0C1;
-
-}
-
-.resume {
-    width:100vw;
-    height:auto;
-    margin:20vh 0 15vh 0;
-}
-
-.CV{
-    width:100vw;
-    height:auto;
-}
-
-
-.contact2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1.2rem;
-    height:30vh;
-
-}
-
-.letsconnect{
-    color: #321F10;
-text-align: center;
-text-shadow: -9px 6px 3.3px rgba(116, 82, 58, 0.40);
-font-family: Poppins;
-font-size: 10vh;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-letter-spacing: 0.7rem;
-margin-top: 5vh;
-}
-
-.contactButtons{
-    display: flex;
-    column-gap: 8vh;
-}
-
-.contactButton{
-    width: 28vh;
-height: 8vh;
-flex-shrink: 0;
-border-radius: 3.5rem;
-border: 3px solid #321F10;
-background: #FFF9EB;
-box-shadow:-12px 7px 4px rgba(116, 82, 58, 0.52);
-
-color: #321F10;
-font-family: Poppins;
-font-size: 3vh;
-font-style: normal;
-font-weight: 700;
-
-letter-spacing: 0.05vh;
-
-display: flex;
-justify-content: center;
-align-items: center;
-column-gap: 0.2vh;
-}
-
-.linkIcon{
-    width: 11vh;
-height: 7vh;
-flex-shrink: 0;
-}
-
-
-.buttonContent{
- display: flex;
-justify-content:flex-end;
-align-content: flex-end;
-column-gap: 0.4vh;
-
-}
-
-.Icon{
-    align-self: center;
-}
-
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 1rem;
-    color: #351B0E;
-    align-content: center;
-
+    text-align: left;
     font-family: Poppins;
-font-size: 2.5vh;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-letter-spacing: 0.02375vh;
-
-margin:20vh 0 3vh 0;
+    font-size: 2.3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.05vh;
+    max-height: 3.6vh;
+    margin: 0;
+    background: #A8DDEF;
+    overflow: hidden;
+    padding-left: 1rem;
 }
 
-.at {
-    font-size: 3.5vh;
-    color: #C4ECFF;
-text-align: center;
-text-shadow: -7px 7px 3px #74523A;
--webkit-text-stroke-width: 0.2vh;
--webkit-text-stroke-color: #351B0E;
-font-family: Poppins;
-padding-bottom: 1vh;
-
-}
-
-
-
-.roleCards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    margin-top: 14vh;
-  
-}
-
-
-.rolecard{
+.rolecard {
     width: 28.5vh;
-min-height: 44vh;
-height: fit-content;
-border-radius: 2.6vh;
-background: #321F10;
-
-display: flex;
-flex-direction: column;
-
-
+    min-height: 44vh;
+    height: fit-content;
+    border-radius: 2.6vh;
+    background: #321F10;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.roleimg{
+.roleimg {
     align-self: center;
 }
 
-.PMimg{
+.PMimg {
     width: 16vh;
-height: 16vh;
-margin: 3vh 0 0 0;
-
+    height: 16vh;
+    margin: 3vh 0 0 0;
 }
 
-.SEimg{
+.SEimg {
     width: 12vh;
-height: 11vh;
-margin:5vh 0vh 4vh 0;
-
+    height: 11vh;
+    margin: 5vh 0vh 4vh 0;
 }
 
-.UXimg{
+.UXimg {
     width: 16vh;
-height: 14vh;
-margin: 2.8vh 0 1vh 0;
-
+    height: 14vh;
+    margin: 2.8vh 0 1vh 0;
 }
 
-.rc1{
+.rc1 {
     border: 0.8vh solid #DDE5B2;
     box-shadow: -13px 31px 11.4px rgba(0, 0, 0, 0.35);
     z-index: 1;
     margin-top: -10vh;
     transform: rotate(-17.874deg);
-    
 }
 
-.rc2{
-    border: 0.8vh solid #BFEDFD;
+.rc1:hover {
+    transition-property: transform, z-index, left;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    transform: translate(170px, -10px);
+    z-index: 4;
+}
+
+.rc1:hover ~ .rc3 {
+    z-index: 1;
+}
+
+.rc2 {
+    border: 0.8vh solid #FEE0DC;
     background: #321F10;
     box-shadow: -26px 10px 7.2px 0px rgba(0, 0, 0, 0.35);
     z-index: 2;
     margin-left: -12vh;
-    
 }
 
-.rc3{
-    border: 0.8vh solid #FEE0DC;
-background: #321F10;
-box-shadow: -26px 19px 12.8px 0px rgba(0, 0, 0, 0.35);
-z-index: 3;
-margin-left: -10vh;
-margin-top: -20vh;
-transform: rotate(12.915deg);
+.rc2:hover {
+    z-index: 4;
 }
 
+.rc3 {
+    border: 0.8vh solid #BFEDFD;
+    background: #321F10;
+    box-shadow: -26px 19px 12.8px 0px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    margin-left: -10vh;
+    margin-top: -20vh;
+    transform: rotate(12.915deg);
+}
 
+.rc3:hover {
+    z-index: 4;
+}
 
 .roleTitle {
     color: #FFF;
-font-family: Poppins;
-font-size: 2.5vh;
-font-style: normal;
-font-weight: 600;
-line-height: 2.4vh;
-justify-self: center;
-letter-spacing: 0.01vh;
-
+    font-family: Poppins;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4vh;
+    justify-self: center;
+    letter-spacing: 0.01vh;
 }
 
-.rt1{
+.rt1 {
     margin-top: 1vh;
     padding-bottom: 3vh;
-    min-width:20vh;
+    min-width: 20vh;
     border-bottom: 3px solid #FFF;
-    
-    
 }
 
-.rt2{
+.rt2 {
     margin-top: 0vh;
     padding-bottom: 3vh;
     font-size: 2.4vh;
-    min-width:20vh;
+    min-width: 20vh;
     border-bottom: 3px solid #FFF;
-
 }
 
-.roleTitle3{
+.roleTitle3 {
     min-width: 20vh;
     padding-bottom: 2vh;
     border-bottom: 3px solid #FFF;
@@ -735,43 +360,912 @@ letter-spacing: 0.01vh;
     min-width: 22vh;
 }
 
-
-.roleInfo{
+.roleInfo {
     color: #FFF;
-font-family: Poppins;
-font-size: 1.6vh;
-font-style: normal;
-font-weight: 400;
-line-height: 3vh;
-/* letter-spacing: vh; */
-
-display: flex;
-flex-direction: column;
-
-justify-content: center;
-margin-top: 2vh;
-padding:0 2.8vh;
-
+    font-family: Poppins;
+    font-size: 1.6vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 0 2.8vh;
 }
 
-.layerContainer{
+.layerContainer {
     position: relative;
     margin-top: 20vh;
 }
 
-.slogan{
-    position: relative;
-    z-index: 1;
-}
-
-
-.roleCards{
-    position:absolute;
+.roleCards {
+    position: absolute;
     z-index: 2;
-   
     top: -60%; /* Adjust vertical position */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -60%); /* Center the container */
-   
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  
+
+    .rolecard {
+        width: 24vh; /* Slightly smaller card width */
+        min-height: 36vh; /* Adjust height proportionally */
+        margin: 1vh; /* Add margin to prevent overlapping */
+    }
+
+    .PMimg, .UXimg, .SEimg {
+        width: 14vh; /* Resize images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .roleTitle {
+        font-size: 2.2vh; /* Reduce title font size */
+    }
+
+    .rt3 {
+        font-size: 2vh;
+        padding-left: 1em;
+    }
+
+    .roleInfo {
+        font-size: 1.5vh; /* Reduce info text size */
+        line-height: 1.5em;
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .roleCards {
+        flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+        justify-content: center; /* Center the cards */
+        gap: 1.5vh; /* Adjust gap between cards */
+    }
+
+    .rolecard {
+        width: 80%; /* Use relative width for better fit */
+        min-height: 32vh; /* Reduce height for smaller screens */
+    }
+
+    .PMimg, .UXimg, .SEimg {
+        width: 12vh; /* Resize images */
+    }
+
+    .roleTitle {
+        font-size: 2vh; /* Adjust title font size */
+    }
+
+    .roleInfo {
+        font-size: 1.4vh; /* Adjust info text size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .roleCards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center-align cards */
+        gap: 1vh; /* Reduce spacing */
+    }
+
+    .rolecard {
+        width: 90%; /* Take up most of the screen width */
+        min-height: 30vh; /* Further reduce card height */
+        margin: 1vh 0; /* Add vertical spacing */
+    }
+
+    .PMimg, .UXimg, .SEimg {
+        width: 10vh; /* Resize images further */
+    }
+
+    .roleTitle {
+        font-size: 1.8vh; /* Adjust title font size */
+    }
+
+    .roleInfo {
+        font-size: 1.2vh; /* Adjust info text size */
+    }
+}
+
+
+.introInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: fit-content;
+    flex-shrink: 0;
+    background: #332B2B;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12vh;
+    row-gap: 8vh;
+}
+
+.introCopy {
+    color: #FFF9EB;
+    font-family: Poppins;
+    font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.5vh; /* 167.273% */
+    letter-spacing: 1px;
+    width: 60vw;
+    text-align: left;
+}
+
+.self-intro {
+    margin-top: 39vh;
+    align-self: center;
+}
+
+.resume1 {
+    border-radius: 4rem;
+    border: 3px solid #321F10;
+    background: #FFF9EB;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.5vh 4.5vh;
+
+    color: #321F10;
+    text-align: center;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #321F10;
+    font-family: Poppins;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.4vh;
+    margin: 4vh 0 3vh 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .introCopy {
+        font-size: 4vh;
+        line-height: 6.5vh;
+        width: 70vw;
+    }
+
+    .resume1 {
+        font-size: 2.8vh;
+        padding: 1.2vh 4vh;
+        letter-spacing: 0.3vh;
+    }
+
+    .self-intro {
+        margin-top: 35vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introCopy {
+        font-size: 3.5vh;
+        line-height: 6vh;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .resume1 {
+        font-size: 2.5vh;
+        padding: 1vh 3.5vh;
+        letter-spacing: 0.2vh;
+    }
+
+    .self-intro {
+        margin-top: 28vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .introCopy {
+        font-size: 3vh;
+        line-height: 5vh;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .resume1 {
+        font-size: 2.2vh;
+        padding: 0.8vh 3vh;
+        letter-spacing: 0.2vh;
+    }
+
+    .self-intro {
+        margin-top: 20vh;
+    }
+}
+
+
+
+/* Skill Style */
+.skills {
+    display: flex;
+    box-shadow: -6px 31px 13.3px 0px rgba(116, 82, 58, 0.35);
+    margin-top: 11vh;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8vh 5vw;
+    overflow: hidden;
+    height: auto; /* Dynamically adjust height based on content */
+}
+
+.skill1 {
+    width: 32vw;
+    background: #DDEDF2;
+    background-image: url("imgs/blueSkill.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skill2 {
+    width: 36vw;
+    background: #FFE2EA;
+    background-image: url("imgs/pinkSkill.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skill3 {
+    width: 33vw;
+    background: #F0F6D6;
+    background-image: url("imgs/greenSkill.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skillName {
+    color: #FFF9EB;
+    -webkit-text-stroke-width: 0.25vh;
+    -webkit-text-stroke-color: #321F10;
+    font-family: Poppins;
+    font-weight: 900;
+    padding-left: 2vh;
+    margin-bottom: 2vh; /* Maintain margin gap with background */
+    font-size: 5.5vh; /* Default font size */
+    line-height: 7.5vh; /* Default line height */
+}
+
+.skillList {
+    color: #321F10;
+    font-family: Poppins;
+    font-weight: 600;
+    padding-left: 4.8vh;
+    font-size: 3vh; /* Default font size */
+    line-height: 6vh; /* Default line height */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .skillName {
+        font-size: 5vh; /* Resize font size */
+        line-height: 7vh; /* Adjust line height */
+    }
+
+    .skillList {
+        font-size: 2.8vh; /* Resize font size */
+        line-height: 5.5vh; /* Adjust line height */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills {
+        flex-direction: column; /* Stack the cards vertically */
+    }
+
+    .skill {
+        width: 100%; /* Make cards full-width */
+        padding: 5vh 3vw; /* Adjust padding */
+    }
+
+    .skillName {
+        font-size: 4.5vh; /* Further resize font size */
+        line-height: 6.5vh; /* Adjust line height */
+    }
+
+    .skillList {
+        font-size: 2.5vh; /* Resize font size */
+        line-height: 5vh; /* Adjust line height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills {
+        flex-direction: column; /* Stack the cards vertically */
+    }
+
+    .skill {
+        width: 100%; /* Make cards full-width */
+        padding: 4vh 2.5vw; /* Adjust padding */
+    }
+
+    .skillName {
+        font-size: 4vh; /* Small screen font size */
+        line-height: 6vh; /* Adjust line height */
+    }
+
+    .skillList {
+        font-size: 2.2vh; /* Small screen font size */
+        line-height: 4.5vh; /* Adjust line height */
+        padding-left: 3vh; /* Adjust padding */
+    }
+}
+
+/* ------------------------------
+   BASE / ORIGINAL STYLES
+--------------------------------*/
+.projects {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    row-gap: 13vh;
+}
+
+.projectsTitle {
+    color: #321F10;
+    text-shadow: -12px 7px 4px rgba(116, 82, 58, 0.3);
+    font-family: Poppins;
+    font-size: 11vh;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.5vh;
+    margin-left: 10vh;
+    margin-top: 15vh;
+    margin-bottom: 8vh;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    /* Keep them side-by-side on large screens */
+}
+
+/* 
+  Force same height for info & image side-by-side 
+  by using a fixed height. 
+*/
+.projectInfo {
+    width: 54vh;
+    height: 84vh;
+    flex-shrink: 0;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.projectImg {
+    width: 89vh;
+    height: 84vh;
+    flex-shrink: 0;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.pImg {
+    width: 80vh;
+    height: 75vh;
+    flex-shrink: 0;
+    border-radius: 35px;
+    box-shadow: -3px 3px 8.7px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+/* Title / Intro */
+.projectTitle {
+    color: #321F10;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 5.625vh; /* 112.5% */
+    letter-spacing: 0.1vh;
+    padding-bottom: 1.5vh;
+    margin-top: -2.5vh;
+}
+
+.title1 {
+    font-size: 7vh;
+}
+
+.title2 {
+    font-size: 6.5vh;
+}
+
+.title3 {
+    font-size: 4.5vh;
+    letter-spacing: 0.2rem;
+}
+
+.projectIntro {
+    color: #53331a;
+    font-family: Poppins;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5vh; /* 158.333% */
+}
+
+/* Tags */
+.projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1vh;
+    row-gap: 0.1rem;
+    justify-content: flex-start;
+    margin-bottom: -3vh;
+}
+
+.tag {
+    width: fit-content;
+    height: 3.5vh;
+    flex-shrink: 0;
+    border-radius: 45px;
+    color: #321F10;
+    font-family: Poppins;
+    font-size: 2.3vh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.5vh;
+    padding: 1.5vh 3vh;
+    margin-top: 2vh;
+}
+
+.taglink {
+    border: 0;
+    /* Remove any incomplete styles if not needed */
+}
+
+/* Project 1 Styles */
+.info1 {
+    background: #FFF1C5;
+    box-shadow: -22px 22px 5px 0px #D4C699;
+}
+
+.glitImg {
+    border: 1px solid #FBEAB3;
+    box-shadow: -3px 3px 8.7px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Img1 {
+    border: 3px solid #F7D465;
+    box-shadow: -22px 22px 5px 0px #D4C699;
+    background: #FFF8E1;
+}
+
+.t1 {
+    background: #FAC88E;
+}
+
+/* Project 2 Styles */
+.info2 {
+    background: #DDEDF2;
+    box-shadow: -22px 22px 5px 0px #B0BCC0;
+}
+
+.calImg {
+    border-radius: 35px;
+    border: 1px solid #B8DBE7;
+    box-shadow: -3px 4px 6.5px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Img2 {
+    border: 3px solid #B8DBE7;
+    box-shadow: -22px 22px 5px 0px #B0BCC0;
+    background: #EAF0F2;
+}
+
+.t2 {
+    background: rgba(175, 214, 228, 0.80);
+}
+
+/* Project 3 Styles */
+.info3 {
+    background: #FBEFF3;
+    box-shadow: -22px 22px 7px 0px #D9C6CD;
+}
+
+.sktImg {
+    border: 1px solid #FFE2EB;
+    box-shadow: -6px 4px 7px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Img3 {
+    border: 2px solid #FFE2EB;
+    box-shadow: -22px 22px 7px 0px #D9C6CD;
+    background: rgba(254, 246, 249);
+}
+
+.t3 {
+    background: #EFB0C1;
+}
+
+/* ------------------------------
+   MEDIA QUERIES FOR RESPONSIVENESS
+--------------------------------*/
+
+/* 
+   For screens below 1200px: 
+   Resize .projectInfo, .projectImg, 
+   and scale titles/tags proportionally.
+*/
+@media screen and (max-width: 1200px) {
+  .projectInfo,
+  .projectImg {
+    height: 70vh;   /* Keep them equal to stay aligned */
+  }
+
+  .projectInfo {
+    width: 45vh;    /* Scale proportionally */
+    padding-left: 4vh;
+    padding-right: 4vh;
+  }
+
+  .projectImg {
+    width: 75vh;
+  }
+
+  .pImg {
+    width: 65vh;
+    height: 60vh;
+  }
+
+  .title1 {
+    font-size: 6vh;
+  }
+
+  .title2 {
+    font-size: 5.5vh;
+  }
+
+  .title3 {
+    font-size: 4vh;
+  }
+
+  .tag {
+    font-size: 2vh; /* Resize tags */
+  }
+
+  .projectIntro {
+    font-size: 2.2vh;
+    line-height: 3.2vh;
+  }
+}
+
+/* 
+   For screens below 768px: 
+   Possibly keep side-by-side or 
+   stack vertically. 
+   If you want to keep side-by-side, remove "flex-direction: column;" 
+   from .project. 
+   If you want them stacked, add it here.
+*/
+@media screen and (max-width: 768px) {
+  /* 
+    OPTIONAL: 
+    If you prefer stacking, uncomment: 
+    .project { flex-direction: column; }
+  */
+
+  .projectInfo,
+  .projectImg {
+    height: 60vh; /* Keep them aligned */
+  }
+
+  .projectInfo {
+    width: 40vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+  }
+
+  .projectImg {
+    width: 70vh;
+  }
+
+  .pImg {
+    width: 55vh;
+    height: 50vh;
+  }
+
+  .projectsTitle {
+    font-size: 9vh;
+    margin-left: 5vh;
+  }
+
+  .title1 {
+    font-size: 5.5vh;
+  }
+
+  .title2 {
+    font-size: 5vh;
+  }
+
+  .title3 {
+    font-size: 3.5vh;
+  }
+
+  .tag {
+    font-size: 1.9vh;
+  }
+
+  .projectIntro {
+    font-size: 2vh;
+    line-height: 3vh;
+  }
+}
+
+/* 
+   For screens below 480px: 
+   Further reduce sizes, 
+   keeping .projectInfo & .projectImg aligned.
+*/
+@media screen and (max-width: 480px) {
+  .projectInfo,
+  .projectImg {
+    height: 50vh;
+  }
+
+  .projectInfo {
+    width: 35vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+
+  .projectImg {
+    width: 60vh;
+  }
+
+  .pImg {
+    width: 45vh;
+    height: 40vh;
+  }
+
+  .projectsTitle {
+    font-size: 7vh;
+    margin-left: 2vh;
+  }
+
+  .title1 {
+    font-size: 4.5vh;
+  }
+
+  .title2 {
+    font-size: 4vh;
+  }
+
+  .title3 {
+    font-size: 3vh;
+  }
+
+  .tag {
+    font-size: 1.7vh;
+    padding: 1.2vh 2vh;
+  }
+
+  .projectIntro {
+    font-size: 1.8vh;
+    line-height: 2.8vh;
+  }
+}
+
+
+
+
+.resume {
+    width: 100vw;     /* Original style: full viewport width */
+    height: auto;     /* Let height adjust based on content */
+    margin: 20vh 0 15vh 0;  /* Original top/bottom spacing */
+}
+
+.CV {
+    width: 100vw;     /* Original style: full viewport width */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Ensures no extra whitespace below image */
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* For tablets and below (optional): reduce vertical spacing */
+@media screen and (max-width: 768px) {
+  .resume {
+    margin: 12vh 0 10vh 0; /* Slightly less spacing on smaller screens */
+  }
+}
+
+/* For mobile screens (optional): further reduce spacing */
+@media screen and (max-width: 480px) {
+  .resume {
+    margin: 8vh 0 6vh 0;
+  }
+}
+
+
+/* Original Styles */
+.contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.2rem;
+    height: 30vh; /* Keep original fixed height on large screens */
+  }
+  
+  .letsconnect {
+    color: #321F10;
+    text-align: center;
+    text-shadow: -9px 6px 3.3px rgba(116, 82, 58, 0.40);
+    font-family: Poppins;
+    font-size: 10vh;    /* Large text */
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.7rem;
+    margin-top: 5vh;
+  }
+  
+  .contactButtons {
+    display: flex;
+    column-gap: 8vh; /* Large spacing between buttons */
+  }
+  
+  .contactButton {
+    width: 28vh;
+    height: 8vh;
+    flex-shrink: 0;
+    border-radius: 3.5rem;
+    border: 3px solid #321F10;
+    background: #FFF9EB;
+    box-shadow: -12px 7px 4px rgba(116, 82, 58, 0.52);
+  
+    color: #321F10;
+    font-family: Poppins;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.05vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2vh;
+  }
+  
+  /* Additional classes within the button */
+  .buttonContent {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    column-gap: 0.4vh;
+  }
+  
+  .Icon {
+    align-self: center;
+  }
+  
+  /* Footer Styles */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    color: #351B0E;
+    align-content: center;
+    font-family: Poppins;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.02375vh;
+    margin: 20vh 0 3vh 0;
+  }
+  
+  .at {
+    font-size: 3.5vh;
+    color: #C4ECFF;
+    text-align: center;
+    text-shadow: -7px 7px 3px #74523A;
+    -webkit-text-stroke-width: 0.2vh;
+    -webkit-text-stroke-color: #351B0E;
+    font-family: Poppins;
+    padding-bottom: 1vh;
+  }
+  
+  /* -----------------------------
+     MEDIA QUERIES FOR RESPONSIVENESS
+  ------------------------------*/
+  
+  /* For screens below 1200px */
+  @media screen and (max-width: 1200px) {
+    .letsconnect {
+      font-size: 8vh;    /* Slightly smaller text */
+      letter-spacing: 0.5rem;
+    }
+  
+    .contactButton {
+      width: 24vh;       /* Proportionally reduce width/height */
+      height: 7vh;
+      font-size: 2.6vh;  /* Slightly smaller font inside button */
+    }
+  
+    .contactButtons {
+      column-gap: 6vh;   /* Reduce gap slightly */
+    }
+  }
+  
+  /* For screens below 768px (Tablet) */
+  @media screen and (max-width: 768px) {
+    .contact2 {
+      height: auto; /* Switch to auto-height to accommodate smaller displays */
+      margin-top: 3vh;
+      row-gap: 2rem;
+    }
+  
+    .letsconnect {
+      font-size: 6.5vh;
+      letter-spacing: 0.4rem;
+    }
+  
+    .contactButtons {
+      flex-direction: column; /* Stack buttons vertically if needed */
+      column-gap: 0;
+      row-gap: 3vh;
+    }
+  
+    .contactButton {
+      width: 22vh;
+      height: 6.5vh;
+      font-size: 2.4vh;
+    }
+  }
+  
+  /* For screens below 480px (Mobile) */
+  @media screen and (max-width: 480px) {
+    .letsconnect {
+      font-size: 5.5vh;
+      letter-spacing: 0.3rem;
+    }
+  
+    .contactButton {
+      width: 20vh;
+      height: 6vh;
+      font-size: 2.2vh;
+    }
+  
+    footer {
+      flex-direction: column; /* Stack the footer text if there's not enough space */
+      margin: 12vh 0 3vh 0;   /* Adjust footer spacing */
+    }
+  }
+  
+
+
+.linkdin:hover path {
+    fill:#58A9C6
+}
+
+.email:hover path {
+    fill:#58A9C6
+}
+
+.Page:hover {
+    color:#58A9C6
 }
 
